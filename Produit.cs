@@ -9,7 +9,7 @@ namespace ListeProduits
     internal class Produit
     {
         private string _nom;
-        private long _prix;
+        private decimal _prix;
 
         public Produit()
         {
@@ -17,7 +17,7 @@ namespace ListeProduits
             _prix = 0;
         }
 
-        public Produit(string nom, long prix)
+        public Produit(string nom, decimal prix)
         {
             _nom = nom;
             _prix = prix;
@@ -29,14 +29,14 @@ namespace ListeProduits
             set { _nom = value; }
         }
 
-        public long prix
+        public decimal prix
         {
             get { return _prix; }
             set { _prix = value; }
         }
 
         public override string ToString() {
-            return _nom;
+            return _nom + " - "+ _prix + "$";
         }
     }
 }

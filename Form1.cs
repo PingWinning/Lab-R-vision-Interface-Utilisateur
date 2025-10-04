@@ -12,14 +12,59 @@ namespace ListeProduits
 {
     public partial class Form1 : Form
     {
+        private BindingList<Produit> listeProduits = new BindingList<Produit>();
+        
         public Form1()
         {
             InitializeComponent();
+            btnSupprimer.Enabled = false;
+            btnEffacer.Enabled = false;
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtBoxNom.Select();
+            numPrix.DecimalPlaces = 2;
+            numPrix.Maximum = decimal.MaxValue;
+        }
+
+        private void MettreAJourBoutons()
+        {
+            if (listBoxProduits.Items.Count > 0) 
+            {
+                btnSupprimer.Enabled = true;
+                btnEffacer.Enabled = true;
+            }
+            else
+            {
+                btnSupprimer.Enabled = false;
+                btnEffacer.Enabled = false;
+            }
+        }
+        private void listBoxProduits_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MettreAJourBoutons();
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            string nomProd = txtBoxNom.Text;
+            decimal prixProd = numPrix.Value;
+
+            Produit produit = new Produit(nomProd, prixProd);
+            listBoxProduits.Items.Add(produit);
+            MettreAJourBoutons();
+        }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            listBoxProduits.Items.Clear();
+            MettreAJourBoutons();
         }
     }
 }

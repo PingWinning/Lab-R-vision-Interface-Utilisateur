@@ -84,6 +84,7 @@
             // 
             // numPrix
             // 
+            this.numPrix.DecimalPlaces = 2;
             this.numPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPrix.Location = new System.Drawing.Point(149, 102);
             this.numPrix.Name = "numPrix";
@@ -98,7 +99,9 @@
             this.listBoxProduits.Location = new System.Drawing.Point(42, 159);
             this.listBoxProduits.Name = "listBoxProduits";
             this.listBoxProduits.Size = new System.Drawing.Size(383, 130);
+            this.listBoxProduits.Sorted = true;
             this.listBoxProduits.TabIndex = 5;
+            this.listBoxProduits.SelectedIndexChanged += new System.EventHandler(this.listBoxProduits_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -128,6 +131,7 @@
             this.btnAjouter.TabIndex = 8;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // btnSupprimer
             // 
@@ -148,6 +152,7 @@
             this.btnEffacer.TabIndex = 10;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;
+            this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
             // btnQuitter
             // 
@@ -179,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Laboratoire de révision";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNbProduits)).EndInit();
             this.ResumeLayout(false);
