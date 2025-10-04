@@ -1,0 +1,29 @@
+# === Visual Studio cache & temporaires ===
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# === Dossiers temporaires de build ===
+[Bb]in/
+[Oo]bj/
+[Tt]emp/
+[Tt]empBuild/
+
+# === Fichiers temporaires spécifiques à VS ===
+*.vsidx
+*.VC.db
+*.VC.VC.opendb
+*.log
+*.tlog
+*.pdb
+
+# === Configurations temporaires ===
+*.config.user
+*.launchSettings.json
+
+# === Fichiers de sauvegarde Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
