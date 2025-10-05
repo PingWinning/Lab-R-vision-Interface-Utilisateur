@@ -101,7 +101,7 @@ Projet réalisé par **Dimitar Simeonov**
 Cours **420-3D4-MO – Interface utilisateur**
 
 
-
+``` 
          _nnnn_                      
         dGGGGMMb     ,"""""""""""""""""""".
        @p~qp~~qMb    | PingWinning Rules! |
@@ -119,4 +119,5 @@ _)      \.___.,|     .'
 \____   )MMMMMM|   .'
      `-'       `--' 
 
+``` 
 ---
