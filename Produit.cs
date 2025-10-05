@@ -10,14 +10,16 @@ namespace ListeProduits
     {
         private string _nom;
         private decimal _prix;
+        private static int _compteur = 0;
 
         public Produit()
         {
             _nom = null;
             _prix = 0;
+            _compteur++;
         }
 
-        public Produit(string nom, decimal prix)
+        public Produit(string nom, decimal prix):this()
         {
             _nom = nom;
             _prix = prix;
@@ -35,8 +37,25 @@ namespace ListeProduits
             set { _prix = value; }
         }
 
+        public static int Compteur
+        {
+            get { return _compteur; }
+        }
+
+        public static void DecrementerCompteur()
+        {
+            if (_compteur > 0) { 
+                _compteur--;
+            }
+        }
+
+        public static void ReinitialiserCompteur()
+        {
+            _compteur = 0;
+        }
+
         public override string ToString() {
-            return _nom + " - "+ _prix + "$";
+            return _nom;
         }
     }
 }

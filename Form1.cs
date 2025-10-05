@@ -54,16 +54,27 @@ namespace ListeProduits
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             string nomProd = txtBoxNom.Text;
-            decimal prixProd = numPrix.Value;
+            decimal prixProd = Math.Round(numPrix.Value, 2);
 
             Produit produit = new Produit(nomProd, prixProd);
             listBoxProduits.Items.Add(produit);
+            numNbProduits.Value = Produit.Compteur;
             MettreAJourBoutons();
         }
 
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             listBoxProduits.Items.Clear();
+            MettreAJourBoutons();
+            Produit.ReinitialiserCompteur();
+            numNbProduits.Value = Produit.Compteur;
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            listBoxProduits.Items.Remove(listBoxProduits.SelectedItem);
+            Produit.DecrementerCompteur();
+            numNbProduits.Value = Produit.Compteur;
             MettreAJourBoutons();
         }
     }
