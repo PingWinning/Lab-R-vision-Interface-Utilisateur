@@ -51,7 +51,7 @@ Le projet a été réalisé dans le cadre du **Laboratoire de révision** du cou
 | `Compteur` *(propriété statique)* | Retourne le nombre total de produits |
 | `DecrementerCompteur()` | Diminue le compteur |
 | `ReinitialiserCompteur()` | Remet le compteur à zéro |
-| `ToString()` | Retourne le texte formaté du produit (`Nom`, toujours avec deux décimales) |
+| `ToString()` | Retourne le texte formaté du produit (`Nom`) |
 
 ### Formulaire `Form1`
 - Contient la logique pour les boutons **Ajouter**, **Supprimer**, **Effacer** et **Quitter**.
